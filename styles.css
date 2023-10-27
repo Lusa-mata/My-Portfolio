@@ -338,3 +338,20 @@ footer {
 
 
       
+      #back-to-top-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #back-to-top-button a {
+        text-decoration: none;
+        color: #fff;
+    }
+    

@@ -49,8 +49,8 @@ footer {
 }
 
 /*Everything below is for when browser window is resized*/
-
 /* Style for the burger icon*/
+
 .bar {
     width: 25px;
     height: 3px;
@@ -315,7 +315,7 @@ footer {
       }
       
       .input-group input:focus {
-        border-color: rgb(111, 0, 255); /*color that outlines user is in the textfield*/
+        border-color: rgba(167, 139, 250, 1); /*color that outlines user is in the textfield*/
       }
       
       
@@ -333,17 +333,15 @@ footer {
         border: none;
         border-radius: 0.375rem;
         font-weight: 600;
-     }
-
-
-     
+      }
+    
+      
       
      
-     .card {
+      .card {
         width: 350px;
         height: 270px;
         border-radius: 4px;
-        background-color: black;
         display: flex;
         gap: 5px;
         padding: .4em;
@@ -358,7 +356,7 @@ footer {
         flex: 1;
         overflow: hidden;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 10px;
         transition: all .5s;
         background-color: rgba(17, 24, 39, 1);
         border: 1px solid rgba(167, 139, 250, 1);
@@ -378,7 +376,7 @@ footer {
     }
       
       .card p:hover {
-        flex: 4;
+        flex: 5;
         border: 1px solid rgb(0, 195, 255);
       }
       
@@ -403,3 +401,7 @@ footer {
         top:100%; /*positioning of the icon below the wording*/
         transform: translateX(-50%); /*center the icon horizontally*/
       }
+
+
+
+      

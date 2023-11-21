@@ -358,10 +358,10 @@ footer {
         flex: 1;
         overflow: hidden;
         cursor: pointer;
-        border-radius: 2px;
+        border-radius: 4px;
         transition: all .5s;
         background-color: rgba(17, 24, 39, 1);
-        border: 1px solid #ff5a91;
+        border: 1px solid rgba(167, 139, 250, 1);
         display: flex;
         justify-content: center;
         align-items: center;

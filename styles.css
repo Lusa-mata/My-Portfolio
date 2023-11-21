@@ -359,7 +359,7 @@ footer {
         border-radius: 10px;
         transition: all .5s;
         background-color: rgba(17, 24, 39, 1);
-        border: 1px solid rgba(167, 139, 250, 1);
+        border: 1px solid rgb(0, 195, 255);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -377,7 +377,8 @@ footer {
       
       .card p:hover {
         flex: 5;
-        border: 1px solid rgb(0, 195, 255);
+        border: 1px solid rgba(167, 139, 250, 1);
+        
       }
       
       .card p span {

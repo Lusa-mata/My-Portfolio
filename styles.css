@@ -406,12 +406,11 @@ footer {
 
 
    /*typing animation effect*/
-   #dynamic-heading {
-    font-size: 300px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    border-right: 2px solid #333; /* Simulate cursor with a border */
-}   
+   #lusaduma-mata {
+    font-size: 2em;
+    color: #fff;
+    padding-right: 5px; /* Adjust as needed */
+  }
 
 
     /*card for about me*/

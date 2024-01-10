@@ -434,3 +434,31 @@ footer {
         margin-top: 30px; /* Adjust the top margin for smaller screens */
     }
 }  
+
+
+
+
+
+/* Add a class for the fixed navigation bar */
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+/* Add a class for styling when fixed */
+.navbar.fixed img {
+    height: 86px; /* Adjust the height of the logo when the navigation bar is fixed */
+}
+
+/* Add a class for styling when fixed */
+.menu.fixed {
+    background-image: linear-gradient(rgb(111, 0, 255), black);
+}
+
+/* Add a class for styling when fixed */
+.menu a.fixed {
+    color: white; /* Change the text color of the links when the navigation bar is fixed */
+}

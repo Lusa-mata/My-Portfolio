@@ -48,3 +48,25 @@ const words = ["Hi there, I am Lusaduma Mata ", "A software developer intern "];
 
     // Initial call to start the loop
     updateHeading();
+
+
+
+
+
+
+    // JavaScript code to add/remove the "fixed" class
+const navbar = document.querySelector('.navbar');
+const menuLinks = document.querySelectorAll('.menu a');
+const menuIconBars = document.querySelectorAll('.bar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('fixed');
+        menuLinks.forEach(link => link.classList.add('fixed'));
+        menuIconBars.forEach(bar => bar.classList.add('fixed'));
+    } else {
+        navbar.classList.remove('fixed');
+        menuLinks.forEach(link => link.classList.remove('fixed'));
+        menuIconBars.forEach(bar => bar.classList.remove('fixed'));
+    }
+});

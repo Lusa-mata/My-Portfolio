@@ -273,7 +273,7 @@ footer {
 
     /*everything below is for the form*/
     .form-container {
-        width: 350px;
+        width: 550px;
         border-radius: 0.75rem;
         background-color: rgba(17, 24, 39, 1);
         padding: 2rem;
@@ -339,7 +339,7 @@ footer {
       
      
       .card {
-        width: 350px;
+        width: 600px;
         height: 270px;
         border-radius: 4px;
         display: flex;
@@ -414,15 +414,16 @@ footer {
 }   
 
 
-.content2 {
-    display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-}
-
-.content2 p {
-    max-width: 600px;
-            margin-left: 10px; /* Adjust the margin as needed */
-}
+    /*card for about me*/
+    .card2 {
+        width: 600px;
+        height: auto;
+        color: white;
+        background: linear-gradient(#212121, #212121) padding-box,
+                    linear-gradient(180deg, transparent 35%,#e81cff, #40c9ff) border-box;
+        border: 6px solid transparent;
+        border-radius: 30px;
+        margin: auto;
+        margin-top: 50px;
+      }
       

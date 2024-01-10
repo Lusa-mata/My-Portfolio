@@ -17,7 +17,7 @@ if (window.innerWidth > 768) {
 
 
 //typing and erasing animation
-const words = ["Hi there, I am Lusaduma Mata ", "A frontend web developer "];
+const words = ["Hi there, I am Lusaduma Mata ", "A software developer innter "];
     let index = 0;
     let isTyping = true;
     let currentWord = "";

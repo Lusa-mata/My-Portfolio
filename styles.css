@@ -427,3 +427,11 @@ footer {
         margin-top: 50px;
       }
       
+      /* Media query for responsiveness */
+@media (max-width: 768px) {
+    .card2 {
+        width: 80%; /* Adjust the width for smaller screens */
+        border-radius: 30px; /* Adjust the border-radius for smaller screens */
+        margin-top: 30px; /* Adjust the top margin for smaller screens */
+    }
+}  

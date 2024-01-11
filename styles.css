@@ -440,31 +440,6 @@ footer {
     padding-right: 5px; /* Adjust as needed */
   }
 
-    /*card for about me*/
-    .card2 {
-        width: 600px;
-        height: auto;
-        color: white;
-        background: linear-gradient(#212121, #212121) padding-box,
-                    linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
-        border: 6px solid transparent;
-        border-radius: 30px;
-        margin: auto;
-        margin-top: 50px;
-      }
-
-    /* Media query for responsiveness */
-@media (max-width: 768px) {
-    .card2 {
-        width: 80%; /* Adjust the width for smaller screens */
-        border-radius: 30px; /* Adjust the border-radius for smaller screens */
-        margin-top: 30px; /* Adjust the top margin for smaller screens */
-    }
-}  
-      
-
-
-
 
 /* Add a class for the fixed navigation bar */
 .navbar.fixed {
@@ -493,13 +468,40 @@ footer {
 
 
 
-/*card for work experience*/
+
+    /*card for about me*/
+    .card2 {
+        width: 600px;
+        height: auto;
+        color: white;
+        background: linear-gradient(#212121, #212121) padding-box,
+                    linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+        border: 6px solid transparent;
+        border-radius: 30px;
+        margin: auto;
+        margin-top: 50px;
+      }
+
+    /* Media query for responsiveness */
+@media (max-width: 768px) {
+    .card2 {
+        width: 80%; /* Adjust the width for smaller screens */
+        border-radius: 30px; /* Adjust the border-radius for smaller screens */
+        margin-top: 30px; /* Adjust the top margin for smaller screens */
+    }
+}  
+      
+
+
+
+
+/*card for secondary education*/
 .card3 {
     width: 600px;
     height: auto;
     color: white;
     background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(-90deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+                linear-gradient(-90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
     border: 6px solid transparent;
     border-radius: 30px;
     margin: auto;
@@ -520,13 +522,13 @@ footer {
 
 
 
-/*card for education*/
+/*card for tertiary education*/
 .card4 {
     width: 600px;
     height: auto;
     color: white;
     background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(90deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+                linear-gradient(90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
     border: 6px solid transparent;
     border-radius: 30px;
     margin: auto;
@@ -536,6 +538,56 @@ footer {
 /* Media query for responsiveness */
 @media (max-width: 768px) {
 .card4 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+
+/*card for work experince 1*/
+.card5 {
+    width: 600px;
+    height: auto;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(360deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+    border: 6px solid transparent;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card5 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+
+
+
+/*card for work experience 2*/
+.card6 {
+    width: 600px;
+    height: auto;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(180deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+    border: 6px solid transparent;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card6 {
     width: 80%; /* Adjust the width for smaller screens */
     border-radius: 30px; /* Adjust the border-radius for smaller screens */
     margin-top: 30px; /* Adjust the top margin for smaller screens */

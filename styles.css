@@ -446,7 +446,7 @@ footer {
         height: auto;
         color: white;
         background: linear-gradient(#212121, #212121) padding-box,
-                    linear-gradient(180deg, transparent 35%,#e81cff, #40c9ff) border-box;
+                    linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
         border: 6px solid transparent;
         border-radius: 30px;
         margin: auto;
@@ -509,6 +509,33 @@ footer {
 /* Media query for responsiveness */
 @media (max-width: 768px) {
 .card3 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+
+
+
+
+/*card for education*/
+.card4 {
+    width: 600px;
+    height: auto;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(90deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+    border: 6px solid transparent;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card4 {
     width: 80%; /* Adjust the width for smaller screens */
     border-radius: 30px; /* Adjust the border-radius for smaller screens */
     margin-top: 30px; /* Adjust the top margin for smaller screens */

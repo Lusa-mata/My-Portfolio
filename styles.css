@@ -778,7 +778,7 @@ footer {
     height: auto;
     color: white;
     background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(90deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+                linear-gradient(180deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
     border: 6px solid transparent;
     border-radius: 30px;
     margin: auto;

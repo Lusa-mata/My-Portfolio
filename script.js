@@ -122,3 +122,81 @@ window.addEventListener('scroll', () => {
         menuIcon.classList.remove('fixed'); // Remove the fixed class from the menu icon
     }
 });
+
+
+
+
+
+
+function scrollToTop() {
+    const scrollOptions = {
+        top: 0,
+        behavior: 'smooth'
+    };
+
+    // Add speed option (optional)
+    const speed = 500; // Adjust the speed value (milliseconds) as needed
+
+    if (speed) {
+        scrollOptions["duration"] = speed;
+    }
+
+    window.scrollTo(scrollOptions);
+
+    // Make the "Home" link active
+    const homeLink = document.querySelector('nav ul li:first-child a');
+    
+    // Remove the "active" class from all links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add the "active" class to the "Home" link
+    homeLink.classList.add('active');
+}
+
+
+
+
+
+
+// Function to make the "Home" link active
+function makeHomeLinkActive() {
+    const homeLink = document.querySelector('nav ul li:first-child a');
+    
+    // Remove the "active" class from all links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add the "active" class to the "Home" link
+    homeLink.classList.add('active');
+}
+
+// Function to handle scrolling
+function handleScroll() {
+    // Check if the user has scrolled to the top of the page
+    if (window.scrollY === 0) {
+        makeHomeLinkActive();
+    }
+}
+
+// Add event listener for scrolling
+window.addEventListener('scroll', handleScroll);
+
+// Function to scroll to the top with optional speed
+function scrollToTop() {
+    const scrollOptions = {
+        top: 0,
+        behavior: 'smooth'
+    };
+
+    // Add speed option (optional)
+    const speed = 500; // Adjust the speed value (milliseconds) as needed
+
+    if (speed) {
+        scrollOptions["duration"] = speed;
+    }
+
+    window.scrollTo(scrollOptions);
+}

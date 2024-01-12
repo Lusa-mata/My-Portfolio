@@ -416,7 +416,7 @@ footer {
     /*make the projects completed card responsive when minimized*/
     @media only screen and (max-width: 600px) {
     .card {
-        width: 100%;
+        width: 97%;
         height: 200px; /*the height of the individual card when minimized*/
         margin: 0; /* Remove margin for center alignment on smaller screens */
     }

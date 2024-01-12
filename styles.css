@@ -620,3 +620,17 @@ footer {
     margin-top: 30px; /* Adjust the top margin for smaller screens */
 }
 }  
+
+
+
+
+/* Add a class for styling when fixed */
+.menu-icon.fixed {
+    position: fixed;
+    top: 40px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the left position as needed */
+    z-index: 1001; /* Ensure it appears above other elements */
+}
+
+
+

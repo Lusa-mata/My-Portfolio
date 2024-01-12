@@ -7,6 +7,21 @@ menuIcon.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
 
+
+
+
+
+
+
+// menu API, closing menu
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        menu.classList.remove("active");
+    }
+});
+
+
+
 // Typing and erasing animation
 const words = ["Hi there, I am Lusaduma Mata ", "A software developer intern "];
 let index = 0;
@@ -42,22 +57,48 @@ updateHeading();
 
 // JavaScript code to add/remove the "fixed" class
 const navbar = document.querySelector('.navbar');
+const menuLinks = document.querySelectorAll('.menu a');
 
 window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
+    
 
-    if (scrollPosition > 0) {
+    if (window.scrollY > 0) {
         navbar.classList.add('fixed');
+        menuLinks.forEach(link => link.classList.add('fixed'));
         updateActiveLink(); // Update active link on scroll
     } else {
         navbar.classList.remove('fixed');
+        menuLinks.forEach(link => link.classList.remove('fixed'));
     }
 });
 
-// Function to update the active link based on scroll position
+
+
+
+
+
+// Additional code for updating the active link based on scrolling
+const sections = document.querySelectorAll('section');
+
 function updateActiveLink() {
-    // Implement your logic to highlight the active link here
-    // This function can be expanded based on your navigation structure
+    sections.forEach((section, index) => {
+        if (isInViewport(section)) {
+            setActiveLink(index);
+        }
+    });
+}
+
+function setActiveLink(index) {
+    menuLinks.forEach(link => link.classList.remove('active'));
+    menuLinks[index].classList.add('active');
+}
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
 }
 
 

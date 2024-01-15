@@ -1,785 +1,849 @@
 /*HTML view*/
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display:flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: black;
-    color: white;
-    
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  
+}
+
+
+/*below is for footer code*/
+.content {
+  flex: 1;
+  padding-bottom: 70px;
+  overflow-y: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(black, rgb(111, 0, 255));
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+}
+/*ends here*/
+
+
+/*navigation bar*/
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgb(111, 0, 255),black);
+  padding: 10px 20px;
   
   
-  /*below is for footer code*/
-  .content {
-    flex: 1;
-    padding-bottom: 70px;
-    overflow-y: auto;
-  }
+}
+
+
+/* Logo for navigation bar*/
+.navbar img {
+  height: 86px;
+  margin: 0;
+}
+
+/*Everything below is for when browser window is resized*/
+/* Style for the burger icon*/
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-icon {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
+/* Style for the navigation menu*/
+.menu {
+  list-style: none;
+  display: flex;
   
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image: linear-gradient(black, rgb(111, 0, 255));
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    z-index: 2;
-  }
-  /*ends here*/
-  
-  
-  /*navigation bar*/
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(rgb(111, 0, 255),black);
-    padding: 10px 20px;
-    
-    
-  }
-  
-  
-  /* Logo for navigation bar*/
-  .navbar img {
-    height: 86px;
-    margin: 0;
-  }
-  
-  /*Everything below is for when browser window is resized*/
-  /* Style for the burger icon*/
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-  }
-  
+}
+
+.menu a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-weight:bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.menu li {
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.menu ul {
+  float:right;
+  display: flex;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+
+.menu a.active {
+  outline: 3px solid rgb(30, 255, 0);
+  outline-offset: -3px; /* Adjust the offset for the outline */
+  color:white;
+  border-radius: 10px;    
+}
+
+.menu a:hover{
+  outline: 3px solid rgb(60, 210, 255);
+  outline-offset: -3px; /* offset for the outline */
+  color: #fff; /*text color on hover*/
+  border-radius: 30px;
+}  
+
+
+/* For screens up to 850px width */
+@media (max-width: 850px) {
   .menu-icon {
-    display: none; 
-    flex-direction: column;
-    cursor: pointer;
+      display: flex;
   }
-  
-  
-  /* Style for the navigation menu*/
+
   .menu {
-    list-style: none;
-    display: flex;
-    
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-image: linear-gradient(black,rgb(111, 0, 255));
+      z-index: 1;
+      padding: 10px 0;
   }
-  
-  .menu a {
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    font-weight:bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
-    text-decoration: none;
+
+  .menu.active {
+      display: flex;
   }
-  
+
   .menu li {
-    margin-right: 20px;
-    white-space: nowrap;
+      margin: 0;
+      padding: 15px 20px;
+      text-align: center;
   }
-  
-  .menu ul {
-    float:right;
-    display: flex;
+
+  .menu a {
+      color: #fff;
   }
-  
-  .menu ul li {
-    display: inline-block;
+}
+
+
+/* Center align the container (whatever needs to be center aligned) */
+.container {
+  text-align: center;
+}
+
+/* Style for the image */
+.profile-img {
+  max-width:200px;
+  height: 30%;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+/* Style for the social media icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  margin: 0 15px;
+}
+
+/* Style for the icons*/
+.social-icons a i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: white; /* Background color for icons */
+  color: black; /* Icon color */
+  border-radius: 50%; /* Create a circular shape */
+}
+
+/*everything below is for the line/heading transition*/
+/*heading transition*/
+.heading {
+  position: relative;
+  font-size: 24px;
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+}
+
+.text::before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Position the line just below the text */
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: rgb(111, 0, 255); /*line color */
+  transition: width 1s ease-in-out;
+}
+
+.text:hover::before, .text:focus::before {
+  width: 100%; /* Line animation to cover the text */
+}
+
+@keyframes moveLine {
+  0% {
+      width: 100%;
+      left: 0;
   }
-  
-  
-  .menu a.active {
-    outline: 3px solid rgb(30, 255, 0);
-    outline-offset: -3px; /* Adjust the offset for the outline */
-    color:white;
-    border-radius: 10px;    
+
+  50% {
+      width: 0; /* Line animation back to start */
+      left: 50%;
   }
+
+  100% {
+      width: 100%; /* Line animation to cover the text again */
+      left: 0;
+      }
+}
+
+.text.autoplay::before {
+  animation: moveLine 3s infinite; /* Adjust animation duration as needed */
+}
+
+
+footer {
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Background color of the footer */
+  color: #fff; /* Text color of the footer */
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+}
+
+/*download my CV button*/
+.download-button {
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  box-sizing: border-box;  
+}
+
+/*make button display at the center*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*everything below is for the form*/
+.form-container {
+  width: 550px;
+  border-radius: 0.75rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 2rem;
+  color: rgba(243, 244, 246, 1);
+}
+    
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;        
+}
   
-  .menu a:hover{
-    outline: 3px solid rgb(60, 210, 255);
-    outline-offset: -3px; /* offset for the outline */
-    color: #fff; /*text color on hover*/
-    border-radius: 30px;
-  }  
+.form {
+  margin-top: 0.2rem;
+}
+    
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+    
+.input-group label {
+  display: block;
+  color: rgba(156, 163, 175, 1);
+  margin-bottom: 4px;
+
+}
+    
+.input-group input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: 0;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 12px;
+  color: rgba(243, 244, 246, 1);
+}
+
+.input-group textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: 0;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 12px;
+  color: rgba(243, 244, 246, 1);
+}
+    
+.input-group input:focus {
+  border-color: rgba(167, 139, 250, 1); /*color that outlines user is in the textfield*/
+}
+   
+
+.input-group message:focus {
+  border-color: rgba(167, 139, 250, 1); /*color that outlines user is in the textfield*/
+}
+    
+.submit:hover {
+  text-decoration: underline rgba(167, 139, 250, 1);
+}
+    
+.submit {
+  display: block;
+  width: 100%;
+  background-color: rgb(110, 62, 252);
+  padding: 0.75rem;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear {
+  display: block;
+  width: 100%;
+  background-color: rgb(88, 243, 235);
+  padding: 0.75rem;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
   
-  
-  /* For screens up to 850px width */
-  @media (max-width: 850px) {
-    .menu-icon {
-        display: flex;
-    }
-  
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-image: linear-gradient(black,rgb(111, 0, 255));
-        z-index: 1;
-        padding: 10px 0;
-    }
-  
-    .menu.active {
-        display: flex;
-    }
-  
-    .menu li {
-        margin: 0;
-        padding: 15px 20px;
-        text-align: center;
-    }
-  
-    .menu a {
-        color: #fff;
-    }
-  }
-  
-  
-  /* Center align the container (whatever needs to be center aligned) */
-  .container {
-    text-align: center;
-  }
-  
-  /* Style for the image */
-  .profile-img {
-    max-width:200px;
-    height: 30%;
-    border-radius: 50%;
-    border: 4px solid white;
-  }
-  
-  /* Style for the social media icons */
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    margin: 0 15px;
-  }
-  
-  /* Style for the icons*/
-  .social-icons a i {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background-color: white; /* Background color for icons */
-    color: black; /* Icon color */
-    border-radius: 50%; /* Create a circular shape */
-  }
-  
-  /*everything below is for the line/heading transition*/
-  /*heading transition*/
-  .heading {
-    position: relative;
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  .text {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .text::before {
-    content: "";
-    position: absolute;
-    bottom: -5px; /* Position the line just below the text */
-    left: 0;
-    width: 0;
-    height: 4px;
-    background-color: rgb(111, 0, 255); /*line color */
-    transition: width 1s ease-in-out;
-  }
-  
-  .text:hover::before, .text:focus::before {
-    width: 100%; /* Line animation to cover the text */
-  }
-  
-  @keyframes moveLine {
-    0% {
-        width: 100%;
-        left: 0;
-    }
-  
-    50% {
-        width: 0; /* Line animation back to start */
-        left: 50%;
-    }
-  
-    100% {
-        width: 100%; /* Line animation to cover the text again */
-        left: 0;
-        }
-  }
-  
-  .text.autoplay::before {
-    animation: moveLine 3s infinite; /* Adjust animation duration as needed */
-  }
-  
-  
-  footer {
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Background color of the footer */
-    color: #fff; /* Text color of the footer */
-    text-align: center;
-    padding: 10px;
-    z-index: 2;
-  }
-  
-  /*download my CV button*/
-  .download-button {
-    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    box-sizing: border-box;  
-  }
-  
-  /*make button display at the center*/
-  .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /*everything below is for the form*/
-  .form-container {
-    width: 550px;
-    border-radius: 0.75rem;
-    background-color: rgba(17, 24, 39, 1);
-    padding: 2rem;
-    color: rgba(243, 244, 246, 1);
-  }
-      
-  .form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;        
+.card {
+  width: 600px;
+  height: 200px;
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+  /* Center align the card */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+    
+.card p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .5s;
+  background-color: rgba(17, 24, 39, 1);
+  border: 1px solid rgba(167, 139, 250, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card p i {
+  display: none; /* Initially hide the icon */
+  position: absolute;
+  top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
   }
     
-  .form {
-    margin-top: 0.2rem;
-  }
-      
-  .input-group {
-    margin-top: 0.25rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-      
-  .input-group label {
-    display: block;
-    color: rgba(156, 163, 175, 1);
-    margin-bottom: 4px;
-  
-  }
-      
-  .input-group input {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid rgba(55, 65, 81, 1);
-    outline: 0;
-    background-color: rgba(17, 24, 39, 1);
-    padding: 12px;
-    color: rgba(243, 244, 246, 1);
-  }
-  
-  .input-group textarea {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid rgba(55, 65, 81, 1);
-    outline: 0;
-    background-color: rgba(17, 24, 39, 1);
-    padding: 12px;
-    color: rgba(243, 244, 246, 1);
-  }
-      
-  .input-group input:focus {
-    border-color: rgba(167, 139, 250, 1); /*color that outlines user is in the textfield*/
-  }
-     
-  
-  .input-group message:focus {
-    border-color: rgba(167, 139, 250, 1); /*color that outlines user is in the textfield*/
-  }
-      
-  .submit:hover {
-    text-decoration: underline rgba(167, 139, 250, 1);
-  }
-      
-  .submit {
-    display: block;
-    width: 100%;
-    background-color: rgb(110, 62, 252);
-    padding: 0.75rem;
-    text-align: center;
-    color: rgba(17, 24, 39, 1);
-    border: none;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .clear {
-    display: block;
-    width: 100%;
-    background-color: rgb(88, 243, 235);
-    padding: 0.75rem;
-    text-align: center;
-    color: rgba(17, 24, 39, 1);
-    border: none;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
+    .card p:hover {
+      flex: 3;
+      border: 1px solid rgb(0, 195, 255);
+    }
     
+    .card p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
+      transform: rotate(-90deg);
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: .1em;
+    }
+    
+    .card p:hover span {
+      transform: rotate(0);
+    }
+
+
+    .card:hover p i, 
+    .card:active p i {
+      display: inline-block; /*show the icon on hover or click*/
+      top:100%; /*positioning of the icon below the wording*/
+      transform: translateX(-50%); /*center the icon horizontally*/
+    }
+
+
+
+
+
+
+  /*make the projects completed card responsive when minimized*/
+  @media only screen and (max-width: 600px) {
   .card {
-    width: 600px;
-    height: 200px;
-    border-radius: 4px;
-    display: flex;
-    gap: 5px;
-    padding: .4em;
-    /* Center align the card */
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+      width: 97%;
+      height: 200px; /*the height of the individual card when minimized*/
+      margin: 0; /* Remove margin for center alignment on smaller screens */
   }
-      
+
   .card p {
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all .5s;
-    background-color: rgba(17, 24, 39, 1);
-    border: 1px solid rgba(167, 139, 250, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+      flex-direction: column; /* Stack paragraphs vertically */
+      height: auto;
+      margin-bottom: 10px; /* Add some spacing between paragraphs */
   }
-  
-  .card p i {
-    display: none; /* Initially hide the icon */
-    position: absolute;
-    top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
+
+}
+
+
+  .card1 {
+  width: 610px;
+      height: 100px;
+      border-radius: 4px;
+      display: flex;
+      gap: 5px;
+      padding: .4em;
+      /* Center align the card */
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      cursor: pointer;
+  }
+
+  .card1 a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+
+
+  .card1 p {
+      height: 100%;
+      flex: 1;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all .5s;
+      background-color: rgba(17, 24, 39, 1);
+      border: 1px solid rgb(0, 195, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
+
+    .card1 p i {
+      display: none; /* Initially hide the icon */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+  }
+    
+    .card1 p:hover {
+      flex: 3;
+      border: 1px solid rgb(0, 195, 255);
+    }
+    
+    .card1 p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
       
-      .card p:hover {
-        flex: 3;
-        border: 1px solid rgb(0, 195, 255);
-      }
-      
-      .card p span {
-        min-width: 14em;
-        padding: .5em;
-        text-align: center;
-        transform: rotate(-90deg);
-        transition: all .5s;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: .1em;
-      }
-      
-      .card p:hover span {
-        transform: rotate(0);
-      }
-  
-  
-      .card:hover p i, 
-      .card:active p i {
-        display: inline-block; /*show the icon on hover or click*/
-        top:100%; /*positioning of the icon below the wording*/
-        transform: translateX(-50%); /*center the icon horizontally*/
-      }
-  
-  
-  
-  
-  
-  
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: .1em;
+    }
+    
+    .card1 p:hover span {
+      transform: rotate(0);
+    }
+
+
+    .card1:hover p i, 
+    .card1:active p i {
+      display: inline-block; /*show the icon on hover or click*/
+      top:100%; /*positioning of the icon below the wording*/
+      transform: translateX(-50%); /*center the icon horizontally*/
+    }
+
+
     /*make the projects completed card responsive when minimized*/
-    @media only screen and (max-width: 600px) {
-    .card {
-        width: 97%;
-        height: 200px; /*the height of the individual card when minimized*/
-        margin: 0; /* Remove margin for center alignment on smaller screens */
-    }
+  @media only screen and (max-width: 600px) {
+      .card1 {
+          width: 97%;
+          height: 100px; /*the height of the individual card when minimized*/
+          margin: 0; /* Remove margin for center alignment on smaller screens */
+      }
   
+      .card1 p {
+          flex-direction: column; /* Stack paragraphs vertically */
+          height: auto;
+          margin-bottom: 10px; /* Add some spacing between paragraphs */
+      }
+  
+  }
+
+
+  /*card for digital maps*/
+  .card {
+      width: 600px;
+      height: 200px;
+      border-radius: 4px;
+      display: flex;
+      gap: 5px;
+      padding: .4em;
+      /* Center align the card */
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    
     .card p {
-        flex-direction: column; /* Stack paragraphs vertically */
-        height: auto;
-        margin-bottom: 10px; /* Add some spacing between paragraphs */
+      height: 100%;
+      flex: 1;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all .5s;
+      background-color: rgba(17, 24, 39, 1);
+      border: 1px solid rgba(167, 139, 250, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
-  
+
+    .card p i {
+      display: none; /* Initially hide the icon */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
   }
-  
-  
-    .card1 {
-    width: 610px;
-        height: 100px;
-        border-radius: 4px;
-        display: flex;
-        gap: 5px;
-        padding: .4em;
-        /* Center align the card */
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        cursor: pointer;
-    }
-  
-    .card1 a {
-        text-decoration: none;
-        color: inherit;
-    }
-  
-  
-  
-    .card1 p {
-        height: 100%;
-        flex: 1;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: all .5s;
-        background-color: rgba(17, 24, 39, 1);
-        border: 1px solid rgb(0, 195, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-  
-      .card1 p i {
-        display: none; /* Initially hide the icon */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-    }
-      
-      .card1 p:hover {
-        flex: 3;
-        border: 1px solid rgb(0, 195, 255);
-      }
-      
-      .card1 p span {
-        min-width: 14em;
-        padding: .5em;
-        text-align: center;
-        
-        transition: all .5s;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: .1em;
-      }
-      
-      .card1 p:hover span {
-        transform: rotate(0);
-      }
-  
-  
-      .card1:hover p i, 
-      .card1:active p i {
-        display: inline-block; /*show the icon on hover or click*/
-        top:100%; /*positioning of the icon below the wording*/
-        transform: translateX(-50%); /*center the icon horizontally*/
-      }
-  
-  
-      /*make the projects completed card responsive when minimized*/
-    @media only screen and (max-width: 600px) {
-        .card1 {
-            width: 97%;
-            height: 100px; /*the height of the individual card when minimized*/
-            margin: 0; /* Remove margin for center alignment on smaller screens */
-        }
     
-        .card1 p {
-            flex-direction: column; /* Stack paragraphs vertically */
-            height: auto;
-            margin-bottom: 10px; /* Add some spacing between paragraphs */
-        }
+    .card p:hover {
+      flex: 3;
+      border: 1px solid rgb(0, 195, 255);
+    }
     
+    .card p span {
+      min-width: 14em;
+      padding: .5em;
+      text-align: center;
+      transform: rotate(-90deg);
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: .1em;
     }
-  
-  
-    /*card for digital maps*/
-    .card {
-        width: 600px;
-        height: 200px;
-        border-radius: 4px;
-        display: flex;
-        gap: 5px;
-        padding: .4em;
-        /* Center align the card */
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-      }
-      
-      .card p {
-        height: 100%;
-        flex: 1;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: all .5s;
-        background-color: rgba(17, 24, 39, 1);
-        border: 1px solid rgba(167, 139, 250, 1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-  
-      .card p i {
-        display: none; /* Initially hide the icon */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-    }
-      
-      .card p:hover {
-        flex: 3;
-        border: 1px solid rgb(0, 195, 255);
-      }
-      
-      .card p span {
-        min-width: 14em;
-        padding: .5em;
-        text-align: center;
-        transform: rotate(-90deg);
-        transition: all .5s;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: .1em;
-      }
-      
-      .card p:hover span {
-        transform: rotate(0);
-      }
-  
-  
-      .card:hover p i, 
-      .card:active p i {
-        display: inline-block; /*show the icon on hover or click*/
-        top:100%; /*positioning of the icon below the wording*/
-        transform: translateX(-50%); /*center the icon horizontally*/
-      }
-  
-  
-    /*make the projects completed card responsive when minimized*/
-    @media only screen and (max-width: 600px) {
-    .card {
-        width: 97%;
-        height: 200px; /*the height of the individual card when minimized*/
-        margin: 0; /* Remove margin for center alignment on smaller screens */
-    }
-  
-    .card p {
-        flex-direction: column; /* Stack paragraphs vertically */
-        height: auto;
-        margin-bottom: 10px; /* Add some spacing between paragraphs */
-    }
-  
-  }
-  
-  
-      
-   /*typing animation*/
-   #lusaduma-mata {
-    font-size: 2em;
-    color: #fff;
     
-    padding-right: 5px; /* Adjust as needed */
-  }
-  
-  
-  /* Add a class for the fixed navigation bar */
-  .navbar.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Adjust the z-index as needed */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
-  }
-  
-  /* Add a class for styling when fixed */
-  .navbar.fixed img {
-    height: 86px; /* Adjust the height of the logo when the navigation bar is fixed */
-  }
-  
-  /* Add a class for styling when fixed */
-  .menu.fixed {
-    background-image: linear-gradient(rgb(111, 0, 255), black);
-  }
-  
-  /* Add a class for styling when fixed */
-  .menu a.fixed {
-    color: white; /* Change the text color of the links when the navigation bar is fixed */
-  }
-  
-  
-    /*card for about me*/
-    .card2 {
-        width: 600px;
-        height: auto;
-        color: white;
-        background: linear-gradient(#212121, #212121) padding-box,
-                    linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
-        border: 6px solid transparent;
-        border-radius: 30px;
-        margin: auto;
-        margin-top: 50px;
-      }
-  
-    /* Media query for responsiveness */
-  @media (max-width: 768px) {
-    .card2 {
-        width: 80%; /* Adjust the width for smaller screens */
-        border-radius: 30px; /* Adjust the border-radius for smaller screens */
-        margin-top: 30px; /* Adjust the top margin for smaller screens */
+    .card p:hover span {
+      transform: rotate(0);
     }
-  }  
-      
-  
-  /*card for secondary education*/
-  .card3 {
-    width: 600px;
-    height: auto;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(-90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
-    border: 6px solid transparent;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 50px;
+
+
+    .card:hover p i, 
+    .card:active p i {
+      display: inline-block; /*show the icon on hover or click*/
+      top:100%; /*positioning of the icon below the wording*/
+      transform: translateX(-50%); /*center the icon horizontally*/
+    }
+
+
+  /*make the projects completed card responsive when minimized*/
+  @media only screen and (max-width: 600px) {
+  .card {
+      width: 97%;
+      height: 200px; /*the height of the individual card when minimized*/
+      margin: 0; /* Remove margin for center alignment on smaller screens */
   }
+
+  .card p {
+      flex-direction: column; /* Stack paragraphs vertically */
+      height: auto;
+      margin-bottom: 10px; /* Add some spacing between paragraphs */
+  }
+
+}
+
+
+    
+ /*typing animation*/
+ #lusaduma-mata {
+  font-size: 2em;
+  color: #fff;
   
+  padding-right: 5px; /* Adjust as needed */
+}
+
+
+/* Add a class for the fixed navigation bar */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index as needed */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+/* Add a class for styling when fixed */
+.navbar.fixed img {
+  height: 86px; /* Adjust the height of the logo when the navigation bar is fixed */
+}
+
+/* Add a class for styling when fixed */
+.menu.fixed {
+  background-image: linear-gradient(rgb(111, 0, 255), black);
+}
+
+/* Add a class for styling when fixed */
+.menu a.fixed {
+  color: white; /* Change the text color of the links when the navigation bar is fixed */
+}
+
+
+  /*card for about me*/
+  .card2 {
+      width: 600px;
+      height: auto;
+      color: white;
+      background: linear-gradient(#212121, #212121) padding-box,
+                  linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+      border: 6px solid transparent;
+      border-radius: 30px;
+      margin: auto;
+      margin-top: 50px;
+    }
+
   /* Media query for responsiveness */
-  @media (max-width: 768px) {
-  .card3 {
-    width: 80%; /* Adjust the width for smaller screens */
-    border-radius: 30px; /* Adjust the border-radius for smaller screens */
-    margin-top: 30px; /* Adjust the top margin for smaller screens */
+@media (max-width: 768px) {
+  .card2 {
+      width: 80%; /* Adjust the width for smaller screens */
+      border-radius: 30px; /* Adjust the border-radius for smaller screens */
+      margin-top: 30px; /* Adjust the top margin for smaller screens */
   }
-  }  
-  
-  
-  /*card for tertiary education*/
-  .card4 {
-    width: 600px;
-    height: auto;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
-    border: 6px solid transparent;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 50px;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-  .card4 {
-    width: 80%; /* Adjust the width for smaller screens */
-    border-radius: 30px; /* Adjust the border-radius for smaller screens */
-    margin-top: 30px; /* Adjust the top margin for smaller screens */
-  }
-  }  
-  
-  
-  /*card for work experince motivity*/
-  .card5 {
-    width: 600px;
-    height: auto;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(360deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
-    border: 6px solid transparent;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 50px;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-  .card5 {
-    width: 80%; /* Adjust the width for smaller screens */
-    border-radius: 30px; /* Adjust the border-radius for smaller screens */
-    margin-top: 30px; /* Adjust the top margin for smaller screens */
-  }
-  }  
-  
-  
-  /*card for work experience capaciti*/
-  .card6 {
-    width: 600px;
-    height: auto;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(180deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
-    border: 6px solid transparent;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 50px;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-  .card6 {
-    width: 80%; /* Adjust the width for smaller screens */
-    border-radius: 30px; /* Adjust the border-radius for smaller screens */
-    margin-top: 30px; /* Adjust the top margin for smaller screens */
-  }
-  }  
-  
-  
-  /* Add a class for styling when fixed */
-  .menu-icon.fixed {
-    position: fixed;
-    top: 40px; /* Adjust the top position as needed */
-    right: 20px; /* Adjust the left position as needed */
-    z-index: 1001; /* Ensure it appears above other elements */
-  }
+}  
+    
+
+/*card for secondary education*/
+.card3 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(-90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card3 {
+  width: 80%; /* Adjust the width for smaller screens */
+  border-radius: 30px; /* Adjust the border-radius for smaller screens */
+  margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+/*card for tertiary education*/
+.card4 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(90deg, transparent 35%,#40c9ff, rgb(111, 0, 255)) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card4 {
+  width: 80%; /* Adjust the width for smaller screens */
+  border-radius: 30px; /* Adjust the border-radius for smaller screens */
+  margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+/*card for work experince motivity*/
+.card5 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(360deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card5 {
+  width: 80%; /* Adjust the width for smaller screens */
+  border-radius: 30px; /* Adjust the border-radius for smaller screens */
+  margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+/*card for work experience capaciti*/
+.card6 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(180deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card6 {
+  width: 80%; /* Adjust the width for smaller screens */
+  border-radius: 30px; /* Adjust the border-radius for smaller screens */
+  margin-top: 30px; /* Adjust the top margin for smaller screens */
+}
+}  
+
+
+/* Add a class for styling when fixed */
+.menu-icon.fixed {
+  position: fixed;
+  top: 40px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the left position as needed */
+  z-index: 1001; /* Ensure it appears above other elements */
+}
+
+
+
+
+/*card for skills*/
+.card7 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(180deg, transparent 35%,rgb(111, 0, 255),#40c9ff ) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.skill-level {
+  width: 600px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background: linear-gradient(#40c9ff,rgb(111, 0, 255)) ;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+.card7 {
+  width: 80%; /* Adjust the width for smaller screens */
+  border-radius: 30px; /* Adjust the border-radius for smaller screens */
+  margin-top: 20px; /* Adjust the top margin for smaller screens */
+}
+
+.skill-level {
+  width: 80%;
+}
+}

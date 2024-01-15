@@ -353,7 +353,7 @@ footer {
 .clear {
   display: block;
   width: 100%;
-  background: linear-gradient(rgb(111, 0, 255),rgb(252, 43, 43));
+  background-color: #fff;
   padding: 0.75rem;
   text-align: center;
   color: rgba(17, 24, 39, 1);

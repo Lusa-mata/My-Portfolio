@@ -340,7 +340,7 @@ footer {
 .submit {
   display: block;
   width: 100%;
-  background-color: rgb(110, 62, 252);
+  background: linear-gradient(#40c9ff,rgb(111, 0, 255));
   padding: 0.75rem;
   text-align: center;
   color: rgba(17, 24, 39, 1);
@@ -353,7 +353,7 @@ footer {
 .clear {
   display: block;
   width: 100%;
-  background-color: rgb(88, 243, 235);
+  background: linear-gradient(rgb(111, 0, 255),rgb(252, 43, 43));
   padding: 0.75rem;
   text-align: center;
   color: rgba(17, 24, 39, 1);
@@ -361,6 +361,7 @@ footer {
   border-radius: 0.375rem;
   font-weight: 600;
   cursor: pointer;
+  
 }
 
   

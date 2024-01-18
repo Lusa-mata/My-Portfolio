@@ -248,6 +248,7 @@ footer {
   z-index: 2;
 }
 
+
 /*download my CV button*/
 .download-button {
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -437,23 +438,22 @@ footer {
 
   /*make the projects completed card responsive when minimized*/
   @media only screen and (max-width: 600px) {
-  .card {
+    .card {
       width: 97%;
       height: 200px; /*the height of the individual card when minimized*/
       margin: 0; /* Remove margin for center alignment on smaller screens */
-  }
+    }
 
-  .card p {
+    .card p {
       flex-direction: column; /* Stack paragraphs vertically */
       height: auto;
       margin-bottom: 10px; /* Add some spacing between paragraphs */
+    }
   }
 
-}
 
-
-  .card1 {
-  width: 610px;
+    .card1 {
+      width: 610px;
       height: 100px;
       border-radius: 4px;
       display: flex;
@@ -464,16 +464,15 @@ footer {
       margin-right: auto;
       position: relative;
       cursor: pointer;
-  }
+    }
 
-  .card1 a {
+    .card1 a {
       text-decoration: none;
       color: inherit;
-  }
+    }
 
 
-
-  .card1 p {
+    .card1 p {
       height: 100%;
       flex: 1;
       overflow: hidden;
@@ -495,7 +494,7 @@ footer {
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 24px;
-  }
+    }
     
     .card1 p:hover {
       flex: 3;
@@ -526,96 +525,95 @@ footer {
     }
 
 
-    /*make the projects completed card responsive when minimized*/
-  @media only screen and (max-width: 600px) {
-      .card1 {
-          width: 97%;
-          height: 100px; /*the height of the individual card when minimized*/
-          margin: 0; /* Remove margin for center alignment on smaller screens */
-      }
-  
-      .card1 p {
-          flex-direction: column; /* Stack paragraphs vertically */
-          height: auto;
-          margin-bottom: 10px; /* Add some spacing between paragraphs */
-      }
-  
+/*make the projects completed card responsive when minimized*/
+@media only screen and (max-width: 600px) {
+  .card1 {
+    width: 97%;
+    height: 100px; /*the height of the individual card when minimized*/
+    margin: 0; /* Remove margin for center alignment on smaller screens */
   }
+  
+  .card1 p {
+    flex-direction: column; /* Stack paragraphs vertically */
+    height: auto;
+    margin-bottom: 10px; /* Add some spacing between paragraphs */
+  }
+}
 
 
-  /*card for digital maps*/
-  .card {
-      width: 600px;
-      height: 200px;
-      border-radius: 4px;
-      display: flex;
-      gap: 5px;
-      padding: .4em;
-      /* Center align the card */
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-    }
-    
-    .card p {
-      height: 100%;
-      flex: 1;
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: all .5s;
-      background-color: rgba(17, 24, 39, 1);
-      border: 1px solid rgba(167, 139, 250, 1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .card p i {
-      display: none; /* Initially hide the icon */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
+/*card for digital maps*/
+.card {
+  width: 600px;
+  height: 200px;
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+  /* Center align the card */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   }
     
-    .card p:hover {
-      flex: 3;
-      border: 1px solid rgb(0, 195, 255);
-    }
+.card p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .5s;
+  background-color: rgba(17, 24, 39, 1);
+  border: 1px solid rgba(167, 139, 250, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card p i {
+  display: none; /* Initially hide the icon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
     
-    .card p span {
-      min-width: 14em;
-      padding: .5em;
-      text-align: center;
-      transform: rotate(-90deg);
-      transition: all .5s;
-      text-transform: uppercase;
-      color: #fff;
-      letter-spacing: .1em;
-    }
+.card p:hover {
+  flex: 3;
+  border: 1px solid rgb(0, 195, 255);
+}
     
-    .card p:hover span {
-      transform: rotate(0);
-    }
+.card p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .1em;
+}
+    
+.card p:hover span {
+  transform: rotate(0);
+}
 
 
-    .card:hover p i, 
-    .card:active p i {
-      display: inline-block; /*show the icon on hover or click*/
-      top:100%; /*positioning of the icon below the wording*/
-      transform: translateX(-50%); /*center the icon horizontally*/
-    }
+.card:hover p i, 
+.card:active p i {
+  display: inline-block; /*show the icon on hover or click*/
+  top:100%; /*positioning of the icon below the wording*/
+  transform: translateX(-50%); /*center the icon horizontally*/
+}
 
 
-  /*make the projects completed card responsive when minimized*/
-  @media only screen and (max-width: 600px) {
+/*make the projects completed card responsive when minimized*/
+@media only screen and (max-width: 600px) {
   .card {
-      width: 97%;
-      height: 200px; /*the height of the individual card when minimized*/
-      margin: 0; /* Remove margin for center alignment on smaller screens */
+    width: 97%;
+    height: 200px; /*the height of the individual card when minimized*/
+    margin: 0; /* Remove margin for center alignment on smaller screens */
   }
 
   .card p {
@@ -623,16 +621,14 @@ footer {
       height: auto;
       margin-bottom: 10px; /* Add some spacing between paragraphs */
   }
-
 }
 
 
     
- /*typing animation*/
- #lusaduma-mata {
+/*typing animation*/
+#lusaduma-mata {
   font-size: 2em;
-  color: #fff;
-  
+  color: #fff;  
   padding-right: 5px; /* Adjust as needed */
 }
 
@@ -662,25 +658,26 @@ footer {
 }
 
 
-  /*card for about me*/
-  .card2 {
-      width: 600px;
-      height: auto;
-      color: white;
-      background: linear-gradient(#212121, #212121) padding-box,
-                  linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
-      border: 6px solid transparent;
-      border-radius: 30px;
-      margin: auto;
-      margin-top: 50px;
-    }
+/*card for about me*/
+.card2 {
+  width: 600px;
+  height: auto;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(0deg, transparent 35%,rgb(111, 0, 255), #40c9ff) border-box;
+  border: 6px solid transparent;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 50px;
+}
 
-  /* Media query for responsiveness */
+
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .card2 {
-      width: 80%; /* Adjust the width for smaller screens */
-      border-radius: 30px; /* Adjust the border-radius for smaller screens */
-      margin-top: 30px; /* Adjust the top margin for smaller screens */
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
   }
 }  
     
@@ -700,11 +697,11 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card3 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 30px; /* Adjust the top margin for smaller screens */
-}
+  .card3 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+  }
 }  
 
 
@@ -723,11 +720,11 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card4 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 30px; /* Adjust the top margin for smaller screens */
-}
+  .card4 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+  }
 }  
 
 
@@ -746,11 +743,11 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card5 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 30px; /* Adjust the top margin for smaller screens */
-}
+  .card5 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+  }
 }  
 
 
@@ -769,11 +766,11 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card6 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 30px; /* Adjust the top margin for smaller screens */
-}
+  .card6 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+  }
 }  
 
 
@@ -793,11 +790,11 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card8 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 30px; /* Adjust the top margin for smaller screens */
-}
+  .card8 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 30px; /* Adjust the top margin for smaller screens */
+  }
 }  
 
 
@@ -862,13 +859,13 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.card7 {
-  width: 80%; /* Adjust the width for smaller screens */
-  border-radius: 30px; /* Adjust the border-radius for smaller screens */
-  margin-top: 20px; /* Adjust the top margin for smaller screens */
-}
+  .card7 {
+    width: 80%; /* Adjust the width for smaller screens */
+    border-radius: 30px; /* Adjust the border-radius for smaller screens */
+    margin-top: 20px; /* Adjust the top margin for smaller screens */
+  }
 
-.skill-level {
-  width: 80%;
-}
+  .skill-level {
+    width: 80%;
+  }
 }

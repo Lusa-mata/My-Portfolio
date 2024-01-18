@@ -2,15 +2,11 @@
 const menuIcon = document.getElementById("menu-icon");
 const menu = document.getElementById("menu");
 
+
 // Menu API: Toggling menu on icon click
 menuIcon.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
-
-
-
-
-
 
 
 // menu API, closing menu
@@ -19,7 +15,6 @@ window.addEventListener("resize", () => {
         menu.classList.remove("active");
     }
 });
-
 
 
 // Typing and erasing animation
@@ -52,8 +47,10 @@ function updateHeading() {
     }
 }
 
+
 // Initial call to start the loop
 updateHeading();
+
 
 // JavaScript code to add/remove the "fixed" class
 const navbar = document.querySelector('.navbar');
@@ -71,10 +68,6 @@ window.addEventListener('scroll', () => {
         menuLinks.forEach(link => link.classList.remove('fixed'));
     }
 });
-
-
-
-
 
 
 // Additional code for updating the active link based on scrolling
@@ -102,14 +95,7 @@ function isInViewport(element) {
 }
 
 
-
-
-
-
-
-
 //menu bar icon when scrolling
-
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
@@ -122,10 +108,6 @@ window.addEventListener('scroll', () => {
         menuIcon.classList.remove('fixed'); // Remove the fixed class from the menu icon
     }
 });
-
-
-
-
 
 
 function scrollToTop() {
@@ -156,10 +138,6 @@ function scrollToTop() {
 }
 
 
-
-
-
-
 // Function to make the "Home" link active
 function makeHomeLinkActive() {
     const homeLink = document.querySelector('nav ul li:first-child a');
@@ -173,6 +151,7 @@ function makeHomeLinkActive() {
     homeLink.classList.add('active');
 }
 
+
 // Function to handle scrolling
 function handleScroll() {
     // Check if the user has scrolled to the top of the page
@@ -181,8 +160,10 @@ function handleScroll() {
     }
 }
 
+
 // Add event listener for scrolling
 window.addEventListener('scroll', handleScroll);
+
 
 // Function to scroll to the top with optional speed
 function scrollToTop() {

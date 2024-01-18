@@ -18,7 +18,7 @@ window.addEventListener("resize", () => {
 
 
 // Typing and erasing animation
-const words = ["Hi there, I am Lusaduma Mata ", "A Junior Software Developer ", "Front-end Web Developer"];
+const words = ["Hi there, I am Lusaduma Mata ", "A Junior Software Developer ", "Front-end Web Developer "];
 let index = 0;
 let isTyping = true;
 let currentWord = "";

@@ -869,3 +869,24 @@ footer {
     width: 80%;
   }
 }
+
+
+
+/* Padding for section headings */
+h1 {
+  padding-top: 200px; 
+}
+
+
+
+
+
+/* For screens up to 850px width */
+@media (max-width: 850px) {
+  /* ... (other responsive styles) */
+
+  /* Padding for section headings in responsive mode */
+  .menu.active h1{
+    padding-top: 20px; /* Adjust the top padding as needed */
+  }
+}

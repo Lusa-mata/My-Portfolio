@@ -40,7 +40,8 @@ footer {
   align-items: center;
   background-image: linear-gradient(rgb(111, 0, 255),black);
   padding: 10px 20px;
-  
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   
 }
 
